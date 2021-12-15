@@ -4,7 +4,7 @@ set -eu -o pipefail
 . scripts/colors.sh
 set -x
 
-if $USE_EXPERIMENTAL_CREDENTIALS_IMAGE ; then
+if [[ -n "${USE_EXPERIMENTAL_CREDENTIALS_IMAGE:-}" ]] ; then
     echo -e "${YELLOW} Using experimental credentials provisioning script...${NC}"
     provision-experimental/lms.sh
     exit 0

@@ -2,6 +2,8 @@
 set -xeuo pipefail
 . scripts/colors.sh
 
+# Depends on LMS and Credentials being up.
+
 name=credentials
 port=18150
 

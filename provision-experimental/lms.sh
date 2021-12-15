@@ -37,10 +37,11 @@ docker-compose exec -T lms bash -e -c './manage.py lms configure_commerce'
 docker-compose exec -T lms /openedx/bin/edxapp-update-assets
 
 # Allow LMS SSO for Studio
-./provision/lms-service-users.sh studio 18010
+./provision-experimental/lms-service-users.sh studio 18010
 
 # Provision a retirement service account user
-./provision-retirement-user.sh retirement retirement_service_worker
+./provision-experimental/retirement-user.sh retirement retirement_service_worker
 
+# TODO: Disabling this for now while iterating.
 # Add demo program
-./programs/provision.sh lms
+# ./programs/provision.sh lms

@@ -10,8 +10,8 @@
 set -eu -o pipefail
 set -x
 
-if $USE_EXPERIMENTAL_EDX_PLATFORM_IMAGES ; then
-    echo -e "${YELLOW} Using experimental lms provisioning script... ${NC}"
+if [[ -n "${USE_EXPERIMENTAL_EDX_PLATFORM_IMAGES:-}" ]] ; then
+    echo -e "Using experimental lms provisioning script..."
     provision-experimental/lms.sh
     exit 0
 fi
