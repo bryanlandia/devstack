@@ -42,19 +42,21 @@ NC='\033[0m' # No Color
 # of services are requested.
 # Changing this order may break provisioning.
 # For example, Discovery breaks if LMS is not provisioned first.
+# ALL_SERVICES_IN_ORDER=" \
+# lms \
+# ecommerce \
+# discovery \
+# credentials \
+# e2e \
+# forum \
+# notes \
+# registrar \
+# marketing \
+# xqueue \
+#  "
 ALL_SERVICES_IN_ORDER=" \
 lms \
-ecommerce \
-discovery \
-credentials \
-e2e \
-forum \
-notes \
-registrar \
-marketing \
-xqueue \
- "
-ALL_SERVICES_IN_ORDER="lms" 
+" 
 
 # What should we provision?
 if [[ $# -eq 0 ]]; then
