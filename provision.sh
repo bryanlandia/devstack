@@ -54,6 +54,7 @@ registrar \
 marketing \
 xqueue \
  "
+ALL_SERVICES_IN_ORDER="lms" 
 
 # What should we provision?
 if [[ $# -eq 0 ]]; then
